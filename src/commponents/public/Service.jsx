@@ -15,6 +15,7 @@ import Slide from '@mui/material/Slide';
 import { useState, createContext, useContext } from 'react';
 import Tooltip from '@mui/material/Tooltip';
 import { Padding } from '@mui/icons-material';
+import Box from '@mui/material/Box';
 import { IsAdminContext } from '../../App';
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -26,7 +27,7 @@ export default function Service({ s }) {
     const [open, setOpen] = useState(false);
     const meetingContext = { open, setOpen }
     const serviceData = s;
-    return (
+    return (< Box sx = {{ paddingBottom: '2vh' }}>
         <Card variant="outlined" sx={{ width: "20vw", height: "35vh" }}>
             <CardOverflow>
                 <AspectRatio ratio="2">
@@ -49,15 +50,15 @@ export default function Service({ s }) {
                         right: '1rem',
                         bottom: 0,
                         transform: 'translateY(50%)',
-                         backgroundColor: '#77474b',
+                        backgroundColor: '#77474b',
                     }}
                     onClick={() => setOpen(true)}
                 >
-                    <Favorite  />
+                    <Favorite />
                 </IconButton> </Tooltip>}
-               
-                 
-               
+
+
+
                 <React.Fragment>
                     <Dialog
                         open={open}
@@ -79,7 +80,7 @@ export default function Service({ s }) {
                 <Typography level="title-md">
                     {serviceData.name}
                 </Typography>
-                <Typography level="body-sm" sx={{height:'5vh'}}>
+                <Typography level="body-sm" sx={{ height: '5vh' }}>
                     {serviceData.description}
                 </Typography>
             </CardContent>
@@ -95,6 +96,6 @@ export default function Service({ s }) {
                     </Typography>
                 </CardContent>
             </CardOverflow>
-        </Card>
+        </Card></Box>
     );
 }

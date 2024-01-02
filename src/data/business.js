@@ -21,7 +21,7 @@ class Business {
                     address: "Pardo 7",
                     phone: "0533158564",
                     owner: "Miri Posen",
-                    logo: "src/commponents/image/logo.jpg",
+                    logo: "https://drive.google.com/uc?export=view&id=1j60-5F7iSaY8PVbl8WSwzlGxkv6FF5HU",
                     description: "3158564@gmail.com"
                 });
             }
