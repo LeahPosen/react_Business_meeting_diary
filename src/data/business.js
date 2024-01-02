@@ -15,9 +15,9 @@ class Business {
             runInAction(() => {
                 this.business = res.data;
             })
-            if (this.business.name ==undefined) {
+            if (this.business.name == undefined) {
                 this.postBusiness({
-                    name: "MAKEUP & BAAUTY",
+                    name: "MAKEUP & BEAUTY",
                     address: "Pardo 7",
                     phone: "0533158564",
                     owner: "Miri Posen",
