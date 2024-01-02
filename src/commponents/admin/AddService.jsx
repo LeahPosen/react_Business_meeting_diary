@@ -15,7 +15,7 @@ const ServiceForm = () => {
     const setCloseContext = useContext(CloseContext).setAnchorElUser;
     const addService = async (data) => {
         try {
-            const status = await service.addService(data);
+            const status = await service.postService(data);
             console.log(status);
             reset();
             setCloseContext(null);
@@ -24,6 +24,7 @@ const ServiceForm = () => {
             reset();
         }
     };
+
 
     const inputStyle = {
         width: '25ch',
@@ -70,7 +71,7 @@ const ServiceForm = () => {
                 </FormControl>
                 <br /><br />
                 <IconButton
-                    type="submit"
+                    type='submit'
                     aria-label="Like minimal photography"
                     size="md"
                     variant="solid"
